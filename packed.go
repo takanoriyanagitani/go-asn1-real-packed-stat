@@ -64,11 +64,11 @@ func SimpleStatFromJson(jbytes []byte) (SimpleStat, error) {
 
 // Simple stat which can't be directly converted to der(using encoding/asn1).
 type SimpleStat struct {
-	Count    int64
-	Minimum  float64
-	Maximum  float64
-	Average  float64
-	Variance float64
+	Count    int64   `json:"count"`
+	Minimum  float64 `json:"minimum"`
+	Maximum  float64 `json:"maximum"`
+	Average  float64 `json:"average"`
+	Variance float64 `json:"variance"`
 }
 
 func (s SimpleStat) ToCount() int64 { return s.Count }
