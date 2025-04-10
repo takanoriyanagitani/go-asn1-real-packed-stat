@@ -21,6 +21,7 @@ linters:
     - dogsled
     - prealloc
     - gosmopolitan
+    - maintidx
 
 linters-settings:
   interfacebloat:
