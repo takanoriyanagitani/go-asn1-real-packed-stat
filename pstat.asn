@@ -1,0 +1,27 @@
+PackedStat DEFINITIONS ::= BEGIN
+
+	SimpleStat ::= SEQUENCE {
+		count INTEGER,
+		minimum REAL,
+		maximum REAL,
+		average REAL,
+		variance REAL
+	}
+
+	RealDoubleBE ::= OCTET STRING(SIZE(8))
+
+	UnpackedRealStat ::= SEQUENCE {
+		minimum RealDoubleBE,
+		maximum RealDoubleBE,
+		average RealDoubleBE,
+		variance RealDoubleBE
+	}
+
+	PackedRealStat ::= OCTET STRING(SIZE(32))
+
+	PackedStat ::= SEQUENCE {
+		count INTEGER,
+		packedStat PackedRealStat
+	}
+
+END
